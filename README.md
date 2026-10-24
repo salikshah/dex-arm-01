@@ -1,13 +1,8 @@
-# DEX ARM 01
-
-**Open-Source 7-Axis Robotic Manipulator & 20-DoF Biomimetic Tendon Hand**  
-*A browser-native physical AI lab: 500 Hz MuJoCo WebAssembly physics, DLS inverse kinematics, LeRobot ACT imitation learning, WebXR teleoperation, and 1-click ROS 2 / MoveIt 2 package export.*
-
----
+<h1 align="center">DEX ARM 01</h1>
 
 <p align="center">
-  <img src="assets/cards/dex-arm-01-card-night.png" alt="DEX ARM 01 Dark Studio Hero" width="49%" />
-  <img src="assets/cards/dex-arm-01-card-day.png" alt="DEX ARM 01 Clean Editorial Studio" width="49%" />
+  <strong>Open-Source 7-Axis Robotic Manipulator &amp; 20-DoF Biomimetic Tendon Hand</strong><br />
+  <em>A browser-native physical AI lab: 500 Hz MuJoCo WebAssembly physics, DLS inverse kinematics, LeRobot ACT imitation learning, WebXR teleoperation, and 1-click ROS 2 / MoveIt 2 package export.</em>
 </p>
 
 <p align="center">
@@ -17,6 +12,10 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
   <a href="https://github.com/google-deepmind/mujoco"><img src="https://img.shields.io/badge/Physics-MuJoCo_3.x_WASM-success?style=for-the-badge" alt="MuJoCo 3.x WASM" /></a>
   <a href="https://github.com/salikshah/dex-arm-01"><img src="https://img.shields.io/badge/ROS_2-Iron_%2F_Jazzy-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS 2 Ready" /></a>
+</p>
+
+<p align="center">
+  <img src="assets/cards/dex-arm-01-card-night.png" alt="DEX ARM 01 Hero Cover" width="100%" />
 </p>
 
 ---
@@ -29,7 +28,6 @@ Built from the ground up to run directly in modern web browsers, it eliminates t
 
 - **For Beginners & Enthusiasts:** Experiment with robotic kinematics, motor torque limits, tendon routing, and contact physics in your browser with **zero installation**.
 - **For AI & Robotics Researchers:** Train and evaluate imitation learning policies. Includes a pre-trained **Action Chunking with Transformers (ACT)** policy on Hugging Face, Hugging Face **LeRobot v3.0** simulation datasets, and instant export to **ROS 2**, **MoveIt 2**, **URDF**, and **MuJoCo MJCF**.
-- **Humanoid Lineage:** Serves as the primary manipulation subsystem for the upcoming **`RAMA`** full bipedal humanoid physical AI platform by [Salik Shah](https://salikshah.com).
 
 ---
 
@@ -277,12 +275,6 @@ To use DEX ARM 01 in your native ROS 2 workspace:
    # Launch and visualize in RViz 2
    ros2 launch dirgha_form_7_description view_robot.launch.py
    ```
-
----
-
-## Humanoid Platform Lineage
-
-**DEX ARM 01** represents the manipulation subsystem of **`RAMA`**, an upcoming sovereign full-scale humanoid robotics initiative. While `RAMA` addresses full-body bipedal locomotion, dynamic balance, and whole-body physical AI, `DEX ARM 01` focuses strictly on high-DoF dexterous manipulation, tactile grasp feedback, and imitation learning.
 
 ---
 
