@@ -1,4 +1,4 @@
-# Dirgha Form-7 — quick-swap forearm cartridge
+# DEX ARM 01 — quick-swap forearm cartridge
 
 Mechanical package for the 20-DoF tendon hand: a self-contained actuator
 cartridge that leaves the hand in under two minutes, plus the wrist bracket and

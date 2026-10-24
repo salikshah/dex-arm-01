@@ -1,4 +1,4 @@
-// Dirgha Form-7: six-stage grasp trajectory controller.
+// DEX ARM 01: six-stage grasp trajectory controller.
 //
 // Plans in joint space around the live scene: the arm waypoints are produced by
 // running the DLS IK solver to a stand-off, contact and lift pose, then restored
@@ -223,7 +223,7 @@ export class GraspTrajectory {
     return planToJSON(this.plan, { frequency });
   }
 
-  downloadJSON(filename = 'dirgha_form_7_grasp_trajectory.json') {
+  downloadJSON(filename = 'dex_arm_01_grasp_trajectory.json') {
     const data = this.exportJSON();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');

@@ -1,4 +1,4 @@
-// Dirgha Form-7: 7-Axis Damped Least Squares (DLS) Inverse Kinematics
+// DEX ARM 01: 7-Axis Damped Least Squares (DLS) Inverse Kinematics
 // with Null-Space Joint Limit Avoidance and Yoshikawa Manipulability Ellipsoid.
 // Adapted from Orocos KDL and MoveIt 2 redundant manipulator kinematics.
 

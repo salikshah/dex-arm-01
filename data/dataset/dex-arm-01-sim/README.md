@@ -7,13 +7,13 @@ tags:
   - mujoco
   - dexterous-manipulation
   - simulated
-  - dirgha-form-7
-pretty_name: Dirgha Form-7 simulated grasp demonstrations
+  - dex-arm-01
+pretty_name: DEX ARM 01 simulated grasp demonstrations
 size_categories:
   - n<1K
 ---
 
-# Dirgha Form-7 — simulated grasp demonstrations
+# DEX ARM 01 — simulated grasp demonstrations
 
 **Simulated data. No physical hand was involved in producing any frame.**
 
@@ -21,7 +21,7 @@ size_categories:
 on a cylinder resting in an open palm. Recorded by driving a MuJoCo model
 headlessly at 500 Hz and sampling state/action at 30 Hz.
 
-- Robot: Dirgha Form-7, `dirgha_form_7`
+- Robot: DEX ARM 01, `dex_arm_01`
 - Format: LeRobot v3.0 (`codebase_version: v3.0`)
 - Episodes: 37 · Frames: 1722 · Tasks: 3 · FPS: 30
 - Features: `observation.state` float32[27], `action` float32[27],
@@ -37,7 +37,7 @@ simulated — a real hand would need a tracker or vision to obtain it.
 ## Provenance
 
 Recorded on 24 October 2026 from `scripts/record-sim-episodes.mjs`, seed 23, in
-the Dirgha Form-7 repository (MIT). 100 scripted attempts were made and **37
+the DEX ARM 01 repository (MIT). 100 scripted attempts were made and **37
 retained the object**; only retained demonstrations are included. The retention
 rate is reported rather than hidden:
 
@@ -78,7 +78,7 @@ palm, elliptic friction cone, 2 ms timestep, DIP/PIP coupling at 0.67.
 ```python
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 
-ds = LeRobotDataset("salik/dirgha-form-7-sim")
+ds = LeRobotDataset("salik/dex-arm-01-sim")
 sample = ds[0]
 sample["observation.state"]              # 27 joint angles (degrees)
 sample["observation.environment_state"]  # 7, object pose in the palm frame
@@ -90,10 +90,10 @@ sample["action"]                         # 27 commanded joint angles
 ```bash
 lerobot-train \
   --policy.type=act \
-  --dataset.repo_id=salik/dirgha-form-7-sim \
+  --dataset.repo_id=salik/dex-arm-01-sim \
   --output_dir=outputs/act \
   --steps=20000 \
-  --policy.repo_id=salik/dirgha-form-7-act
+  --policy.repo_id=salik/dex-arm-01-act
 ```
 
 ## Licence

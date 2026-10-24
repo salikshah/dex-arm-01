@@ -1,4 +1,4 @@
-// Dirgha Form-7: WebXR hand-tracking teleoperation bridge.
+// DEX ARM 01: WebXR hand-tracking teleoperation bridge.
 //
 // Apple Vision Pro / Quest expose 25 standard hand joints through the WebXR
 // Hand Input module. We read the tracked joint spaces each XR frame, reduce

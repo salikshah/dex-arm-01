@@ -83,7 +83,7 @@ test('wrist calibration scales and offsets into the arm workspace', () => {
 test('dataset info declares the LeRobot v3.0 layout', () => {
   const info = buildInfo({ fps: 30, task: 'grasp the mug', totalFrames: 12, totalEpisodes: 1 });
   assert.equal(info.codebase_version, 'v3.0');
-  assert.equal(info.robot_type, 'dirgha_form_7');
+  assert.equal(info.robot_type, 'dex_arm_01');
   assert.equal(info.features['observation.state'].shape[0], 27);
   assert.equal(info.features['observation.state'].names.motors.length, 27);
   assert.equal(info.features['observation.tactile'].shape[0], 6);

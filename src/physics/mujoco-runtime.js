@@ -1,4 +1,4 @@
-// Dirgha Form-7: MuJoCo WASM physics runtime.
+// DEX ARM 01: MuJoCo WASM physics runtime.
 //
 // Loads the canonical Google DeepMind JavaScript bindings lazily, compiles the
 // generated 27-DoF MJCF, mirrors commanded joint angles into position servos,

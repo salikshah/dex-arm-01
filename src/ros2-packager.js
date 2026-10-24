@@ -1,4 +1,4 @@
-// Dirgha Form-7: ROS 2 & MoveIt 2 Package Generator
+// DEX ARM 01: ROS 2 & MoveIt 2 Package Generator
 // Generates a complete colcon-buildable ROS 2 Iron/Jazzy workspace package
 // with URDF, SRDF, MoveIt 2 configs, ros2_controllers, RViz launch files, and MuJoCo MJCF.
 // Pure vanilla JS with zero external dependencies (standard uncompressed ZIP store format).
@@ -115,7 +115,7 @@ function crc32(buf) {
 
 export function generateSRDF() {
   return `<?xml version="1.0" encoding="UTF-8"?>
-<robot name="dirgha_form_7">
+<robot name="dex_arm_01">
   <!-- MoveIt 2 Planning Groups -->
   <group name="arm">
     <chain base_link="base_link" tip_link="link_7"/>
@@ -211,7 +211,7 @@ export function generateSRDF() {
 }
 
 export function generateJointLimitsYAML() {
-  return `# Joint Limits specification for Dirgha Form-7 (Harmonic Drive Strain-Wave limits)
+  return `# Joint Limits specification for DEX ARM 01 (Harmonic Drive Strain-Wave limits)
 joint_limits:
   J1:
     has_velocity_limits: true
@@ -311,9 +311,9 @@ export function generatePackageXML() {
   return `<?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>dirgha_form_7_description</name>
+  <name>dex_arm_01_description</name>
   <version>1.0.0</version>
-  <description>Dirgha Form-7 Sovereign 7-Axis Manipulator and 20-DoF Dexterous Tendon Hand Description Package</description>
+  <description>DEX ARM 01 Sovereign 7-Axis Manipulator and 20-DoF Dexterous Tendon Hand Description Package</description>
   <maintainer email="salik@salikshah.com">Salik Shah</maintainer>
   <license>Apache-2.0</license>
 
@@ -334,7 +334,7 @@ export function generatePackageXML() {
 
 export function generateCMakeLists() {
   return `cmake_minimum_required(VERSION 3.8)
-project(dirgha_form_7_description)
+project(dex_arm_01_description)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -358,8 +358,8 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('dirgha_form_7_description')
-    urdf_path = os.path.join(pkg_share, 'urdf', 'dirgha_form_7.urdf')
+    pkg_share = get_package_share_directory('dex_arm_01_description')
+    urdf_path = os.path.join(pkg_share, 'urdf', 'dex_arm_01.urdf')
 
     with open(urdf_path, 'r') as infp:
         robot_desc = infp.read()
@@ -389,7 +389,7 @@ def generate_launch_description():
 }
 
 export function generateReadme() {
-  return `# Dirgha Form-7 ROS 2 & MoveIt 2 Package
+  return `# DEX ARM 01 ROS 2 & MoveIt 2 Package
 
 Autonomous 7-Axis Manipulator + 20-DoF Tendon Hand.
 Architected and engineered by Salik Shah (https://salikshah.com/code/index.html).
@@ -398,7 +398,7 @@ Architected and engineered by Salik Shah (https://salikshah.com/code/index.html)
 - Complete 7-DoF kinematic tree with Harmonic Drive gear limits.
 - 20-DoF Dexterous tendon hand with extensor-flexor moment arms.
 - MoveIt 2 kinematic planning groups: \`arm\`, \`hand\`, \`manipulator\`.
-- DeepMind MuJoCo MJCF model in \`mujoco/dirgha_form_7.xml\`.
+- DeepMind MuJoCo MJCF model in \`mujoco/dex_arm_01.xml\`.
 
 ## Build & Launch
 \`\`\`bash
@@ -407,28 +407,28 @@ source /opt/ros/iron/setup.bash
 
 # 2. Build in your ROS 2 workspace
 cd ~/ros2_ws
-colcon build --packages-select dirgha_form_7_description
+colcon build --packages-select dex_arm_01_description
 source install/setup.bash
 
 # 3. Launch in RViz 2
-ros2 launch dirgha_form_7_description view_robot.launch.py
+ros2 launch dex_arm_01_description view_robot.launch.py
 \`\`\`
 `;
 }
 
-export function exportROS2Package(filename = 'dirgha_form_7_ros2.zip') {
+export function exportROS2Package(filename = 'dex_arm_01_ros2.zip') {
   const zip = createZip();
-  const pkg = 'dirgha_form_7_description/';
+  const pkg = 'dex_arm_01_description/';
 
   zip.add(pkg + 'package.xml', generatePackageXML());
   zip.add(pkg + 'CMakeLists.txt', generateCMakeLists());
   zip.add(pkg + 'README.md', generateReadme());
-  zip.add(pkg + 'urdf/dirgha_form_7.urdf', generateURDF());
-  zip.add(pkg + 'config/dirgha_form_7.srdf', generateSRDF());
+  zip.add(pkg + 'urdf/dex_arm_01.urdf', generateURDF());
+  zip.add(pkg + 'config/dex_arm_01.srdf', generateSRDF());
   zip.add(pkg + 'config/joint_limits.yaml', generateJointLimitsYAML());
   zip.add(pkg + 'config/ros2_controllers.yaml', generateControllersYAML());
   zip.add(pkg + 'launch/view_robot.launch.py', generateLaunchPy());
-  zip.add(pkg + 'mujoco/dirgha_form_7.xml', generateMJCF());
+  zip.add(pkg + 'mujoco/dex_arm_01.xml', generateMJCF());
 
   const blob = zip.toBlob();
   const a = document.createElement('a');

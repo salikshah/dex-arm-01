@@ -112,11 +112,11 @@ export function createAPI(ctx) {
       api._renderOnce();
     },
 
-    exportPNG() { return exportPNG(renderer, scene, camera, 'dirgha-form-7-view.png'); },
-    exportGLB() { return exportGLB(model.root, 'dirgha-form-7.glb'); },
-    exportURDF() { return exportURDF('dirgha_form_7.urdf'); },
-    exportMJCF() { return exportMJCF('dirgha_form_7.xml'); },
-    exportROS2() { return exportROS2('dirgha_form_7_ros2.zip'); },
+    exportPNG() { return exportPNG(renderer, scene, camera, 'dex-arm-01-view.png'); },
+    exportGLB() { return exportGLB(model.root, 'dex-arm-01.glb'); },
+    exportURDF() { return exportURDF('dex_arm_01.urdf'); },
+    exportMJCF() { return exportMJCF('dex_arm_01.xml'); },
+    exportROS2() { return exportROS2('dex_arm_01_ros2.zip'); },
 
     // ---- MuJoCo physics (lazy WASM) ----
     async enablePhysics() { const ok = await physics?.enable(); api._changed(); return ok; },

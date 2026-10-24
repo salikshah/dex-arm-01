@@ -1,4 +1,4 @@
-# Colab runbook: train ACT on `salik/dirgha-form-7-sim`
+# Colab runbook: train ACT on `salik/dex-arm-01-sim`
 
 Verified locally against `lerobot` 0.6.1 on 24 October 2026: the dataset loads (37
 episodes, 1722 frames, 30 fps, features 27/7/27) and `lerobot-train --policy.type=act`
@@ -59,12 +59,12 @@ from huggingface_hub import HfApi
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 
 try:
-    HfApi().create_tag("salik/dirgha-form-7-sim", tag="v3.0", repo_type="dataset")
+    HfApi().create_tag("salik/dex-arm-01-sim", tag="v3.0", repo_type="dataset")
     print("created tag v3.0")
 except Exception as exc:
     print("tag already present:", type(exc).__name__)
 
-ds = LeRobotDataset("salik/dirgha-form-7-sim")
+ds = LeRobotDataset("salik/dex-arm-01-sim")
 print("episodes", ds.num_episodes, "frames", ds.num_frames, "fps", ds.fps)
 print("features", sorted(ds.meta.features))
 s = ds[0]
@@ -89,20 +89,20 @@ fail later with a worse error.
 ```python
 !lerobot-train \
   --policy.type=act \
-  --dataset.repo_id=salik/dirgha-form-7-sim \
-  --output_dir=outputs/act_dirgha \
-  --job_name=dirgha_act \
+  --dataset.repo_id=salik/dex-arm-01-sim \
+  --output_dir=outputs/act_dex_arm \
+  --job_name=dex_arm_act \
   --steps=20000 \
   --batch_size=16 \
   --num_workers=2 \
   --save_freq=5000 \
   --wandb.enable=false \
   --policy.push_to_hub=true \
-  --policy.repo_id=salik/dirgha-form-7-act
+  --policy.repo_id=salik/dex-arm-01-act
 ```
 
 **Expect:** a progress bar ending at `20000/20000`, a checkpoint every 5000
-steps, and pushes to `huggingface.co/salik/dirgha-form-7-act`.
+steps, and pushes to `huggingface.co/salik/dex-arm-01-act`.
 
 **Timing on a T4:** roughly 0.1–0.3 s/step at batch 16, so 35–100 min. If it is
 far slower, the GPU was not attached — recheck cell 1.
@@ -111,14 +111,14 @@ far slower, the GPU was not attached — recheck cell 1.
 the tab active. To resume after a disconnect, rerun cells 1–4, then:
 
 ```python
-!lerobot-train --resume=true --config_path=outputs/act_dirgha/train_config.json --output_dir=outputs/act_dirgha
+!lerobot-train --resume=true --config_path=outputs/act_dex_arm/train_config.json --output_dir=outputs/act_dex_arm
 ```
 
 ## 7. Cell 6 — verify the checkpoint actually landed
 
 ```python
 from huggingface_hub import HfApi
-files = HfApi().list_repo_files("salik/dirgha-form-7-act")
+files = HfApi().list_repo_files("salik/dex-arm-01-act")
 print(len(files), "files")
 for f in files[:20]: print(" ", f)
 assert any(f.endswith("config.json") for f in files), "checkpoint did not upload"
@@ -130,7 +130,7 @@ assert any(f.endswith("config.json") for f in files), "checkpoint did not upload
 ## 8. Cell 7 — report the numbers
 
 ```python
-!ls -la outputs/act_dirgha/checkpoints
+!ls -la outputs/act_dex_arm/checkpoints
 ```
 
 Send me:

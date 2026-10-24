@@ -132,7 +132,7 @@ Pre-trained weights and training artifacts:
 | **Minimum-Jerk Planning** | 6-stage quintic minimum-jerk trajectory generator (`Home` $\to$ `Pre-Grasp` $\to$ `Approach` $\to$ `Contact` $\to$ `Grasp & Lift` $\to$ `Retract`). |
 | **WebXR Teleoperation** | Real-time spatial teleoperation using WebXR Hand Tracking API (Meta Quest 3, Apple Vision Pro). Hand joint angles map directly into the 20-DoF finger pose and wrist IK. |
 | **LeRobot v3.0 Dataset** | Built-in 30 Hz episode recorder outputting Parquet/JSONL datasets with standard LeRobot feature names (`observation.state`, `action`, `observation.images.wrist`). |
-| **ROS 2 & MoveIt 2 Export** | Zero-dependency in-memory ZIP packager exporting a complete ROS 2 Iron/Jazzy workspace package (`dirgha_form_7_description`) with URDF, SRDF, MoveIt 2 configs, and RViz launch scripts. |
+| **ROS 2 & MoveIt 2 Export** | Zero-dependency in-memory ZIP packager exporting a complete ROS 2 Iron/Jazzy workspace package (`dex_arm_01_description`) with URDF, SRDF, MoveIt 2 configs, and RViz launch scripts. |
 
 ---
 
@@ -261,19 +261,19 @@ We believe in strict engineering honesty. Here is what is mathematically verifie
 To use DEX ARM 01 in your native ROS 2 workspace:
 
 1. Click **Export ROS 2 / MoveIt 2** in the browser interface (or call `exportROS2Package()` from `src/ros2-packager.js`).
-2. Extract the downloaded `dirgha_form_7_ros2.zip` into your ROS 2 workspace:
+2. Extract the downloaded `dex_arm_01_ros2.zip` into your ROS 2 workspace:
    ```bash
    mkdir -p ~/ros2_ws/src
-   unzip dirgha_form_7_ros2.zip -d ~/ros2_ws/src/
+   unzip dex_arm_01_ros2.zip -d ~/ros2_ws/src/
    
    # Build the package
    cd ~/ros2_ws
    source /opt/ros/iron/setup.bash    # or /opt/ros/jazzy/setup.bash
-   colcon build --packages-select dirgha_form_7_description
+   colcon build --packages-select dex_arm_01_description
    source install/setup.bash
    
    # Launch and visualize in RViz 2
-   ros2 launch dirgha_form_7_description view_robot.launch.py
+   ros2 launch dex_arm_01_description view_robot.launch.py
    ```
 
 ---
@@ -293,6 +293,12 @@ If you use **DEX ARM 01** in academic research, benchmark studies, or physical A
   url          = {https://salikshah.com/work/dex-arm-01/}
 }
 ```
+
+---
+
+## Credits & Sources
+
+Complete attribution for all foundational physics engines (Google DeepMind MuJoCo), imitation learning frameworks (Hugging Face LeRobot & ACT), 3D math libraries (Three.js), and robotics kinematics/control literature (Yoshikawa, Flash & Hogan, Ferrari-Canny, Chiaverini) is documented in **[CREDITS.md](CREDITS.md)** and **[SOURCES.md](SOURCES.md)**.
 
 ---
 

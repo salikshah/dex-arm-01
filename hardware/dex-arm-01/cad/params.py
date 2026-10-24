@@ -1,4 +1,4 @@
-"""Dirgha Form-7 quick-swap forearm cartridge — parametric dimensions.
+"""DEX ARM 01 quick-swap forearm cartridge — parametric dimensions.
 
 Pure Python (no CAD kernel required). Run `python params.py` to validate the
 packaging arithmetic before generating solids:

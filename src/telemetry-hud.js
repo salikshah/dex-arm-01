@@ -1,4 +1,4 @@
-// Dirgha Form-7: Professional Robotics Telemetry & Scientific Analysis HUD
+// DEX ARM 01: Professional Robotics Telemetry & Scientific Analysis HUD
 // Displays real-time:
 // 1. Tendon Tensions (N) & Anatomical Biomechanics
 // 2. Ferrari-Canny Grasp Wrench Space Quality (epsilon) & Force Closure Status

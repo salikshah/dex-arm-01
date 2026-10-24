@@ -1,4 +1,4 @@
-// Dirgha Form-7: Self-Collision Detection & Workspace Safety Engine
+// DEX ARM 01: Self-Collision Detection & Workspace Safety Engine
 // Implements capsule-capsule continuous distance queries (Ericson / Sunday algorithm)
 // between non-adjacent manipulator segments and floor boundary checks.
 

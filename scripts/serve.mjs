@@ -77,7 +77,7 @@ const server = createServer((req, res) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Dirgha Form-7 dev server → http://${host}:${port}/index.html`);
+  console.log(`DEX ARM 01 dev server → http://${host}:${port}/index.html`);
 });
 
 for (const sig of ['SIGINT', 'SIGTERM']) {

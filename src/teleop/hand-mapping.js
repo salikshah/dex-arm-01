@@ -1,4 +1,4 @@
-// WebXR 25-joint hand → 20-DoF Dirgha joint vector.
+// WebXR 25-joint hand → 20-DoF DEX ARM 01 joint vector.
 // Dependency-free: unit tests exercise this without a browser or Three.js.
 
 import { HAND_JOINT_LIMITS } from '../params.js';

@@ -1,4 +1,4 @@
-// Headless grasp benchmark for Dirgha Form-7.
+// Headless grasp benchmark for DEX ARM 01.
 //
 // Protocol, per episode:
 //   1. build the MJCF with a randomised grasp target (radius, length, mass,
@@ -240,7 +240,7 @@ async function main() {
 
   const mod = await import('@mujoco/mujoco');
   const mj = await mod.default();
-  console.log(`Dirgha Form-7 drop benchmark — ${config.episodes} episodes, seed ${config.seed}`);
+  console.log(`DEX ARM 01 drop benchmark — ${config.episodes} episodes, seed ${config.seed}`);
 
   const episodes = [];
   const started = Date.now();

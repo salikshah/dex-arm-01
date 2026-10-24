@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-10-24T09:40:14.938Z",
-  "source": "dirgha-form-7/mujoco-sim",
+  "source": "dex-arm-01/mujoco-sim",
   "seed": 23,
   "fps": 30,
   "timestep": 0.002,

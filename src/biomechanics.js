@@ -1,4 +1,4 @@
-// Dirgha Form-7: Biomechanical Tendon Physics & Grasp Wrench Space Engine
+// DEX ARM 01: Biomechanical Tendon Physics & Grasp Wrench Space Engine
 // Implements anatomical DIP-PIP extensor coupling, 24x20 tendon routing transmission,
 // and Ferrari-Canny Grasp Wrench Space (GWS) force-closure quality metrics.
 

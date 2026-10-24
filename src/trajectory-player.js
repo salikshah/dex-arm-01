@@ -1,4 +1,4 @@
-// Dirgha Form-7: quintic minimum-jerk trajectory planner and player.
+// DEX ARM 01: quintic minimum-jerk trajectory planner and player.
 //
 // The classic closed-form quintic with zero velocity and acceleration at both
 // ends is s(u) = 10u³ − 15u⁴ + 6u⁵. Its peak acceleration occurs at u = 0.5
@@ -179,7 +179,7 @@ export function planToJSON(plan, { frequency = 50, jointNames } = {}) {
       points,
     },
     metadata: {
-      generator: 'dirgha-form-7/minimum-jerk',
+      generator: 'dex-arm-01/minimum-jerk',
       profile: 'quintic 10u^3 - 15u^4 + 6u^5',
       duration: plan.duration,
       sample_rate_hz: frequency,

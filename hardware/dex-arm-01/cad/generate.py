@@ -1,4 +1,4 @@
-"""Generate STEP models for the Dirgha Form-7 quick-swap forearm cartridge.
+"""Generate STEP models for the DEX ARM 01 quick-swap forearm cartridge.
 
 Requires build123d (we recommend a pinned virtual environment):
 

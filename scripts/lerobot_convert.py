@@ -1,4 +1,4 @@
-"""Convert Dirgha Form-7 episodes (JSONL bundle + meta) to LeRobot v3.0.
+"""Convert DEX ARM 01 episodes (JSONL bundle + meta) to LeRobot v3.0.
 
 Frames are grouped by `episode_index`, so one JSONL file can hold either a single
 browser recording or a whole batch recorded by `scripts/record-sim-episodes.mjs`.
@@ -9,12 +9,12 @@ metadata shape it sees for any published dataset.
 Usage
 -----
     py -m pip install pyarrow pillow
-    py scripts/lerobot_convert.py episodes.jsonl [meta.json] out/dirgha_sim
-    py scripts/lerobot_convert.py episodes.jsonl out/dirgha_sim --no-video
+    py scripts/lerobot_convert.py episodes.jsonl [meta.json] out/dex_arm_01_sim
+    py scripts/lerobot_convert.py episodes.jsonl out/dex_arm_01_sim --no-video
 
 Output layout (LeRobot v3.0):
 
-    out/dirgha_sim/
+    out/dex_arm_01_sim/
       meta/info.json
       meta/stats.json
       meta/tasks.parquet
@@ -351,7 +351,7 @@ def main() -> int:
 
     info = {
         "codebase_version": "v3.0",
-        "robot_type": "dirgha_form_7",
+        "robot_type": "dex_arm_01",
         "total_episodes": len(episode_rows),
         "total_frames": n,
         "total_tasks": len(tasks),

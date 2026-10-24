@@ -1,4 +1,4 @@
-// Dirgha Form-7: Actuator Dynamics, Harmonic Drive Torque Curves, and Thermal Model
+// DEX ARM 01: Actuator Dynamics, Harmonic Drive Torque Curves, and Thermal Model
 // Models strain-wave gear reducers (Harmonic Drive AG), continuous vs. peak torque envelopes,
 // real-time gravity static loads, and I^2*R coil thermal saturation.
 

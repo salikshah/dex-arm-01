@@ -43,7 +43,7 @@ Details and the audit bundle are in `data/README.md`.
    count matches parquet rows. The converter path is already proven with the
    synthetic fixture; only the in-browser capture is missing.
 3. ~~Publish to the Hub~~ — live at
-   [salik/dirgha-form-7-sim](https://huggingface.co/datasets/salik/dirgha-form-7-sim),
+   [salik/dex-arm-01-sim](https://huggingface.co/datasets/salik/dex-arm-01-sim),
    MIT, public, with the retention table and limits in the dataset card.
    Verified by downloading `data/chunk-000/file-000.parquet` back from the Hub:
    1722 rows, 37 episodes, `codebase_version` v3.0. `datasets-server` was still
@@ -67,17 +67,17 @@ and the dataset was republished with that feature.
 pip install "lerobot==0.6.1"
 lerobot-train \
   --policy.type=act \
-  --dataset.repo_id=salik/dirgha-form-7-sim \
-  --output_dir=outputs/act_dirgha \
+  --dataset.repo_id=salik/dex-arm-01-sim \
+  --output_dir=outputs/act_dex_arm \
   --steps=20000 --batch_size=16 --save_freq=5000 \
-  --policy.push_to_hub=true --policy.repo_id=salik/dirgha-form-7-act
+  --policy.push_to_hub=true --policy.repo_id=salik/dex-arm-01-act
 ```
 
 ACT on 27-DoF state plus 7-DoF object pose is small: batch 16 fits a T4 easily.
 20 000 steps is a pipeline demonstration, not a converged policy — 1722 frames
 will overfit long before that.
 
-**Status:** the path is proven locally. `LeRobotDataset("salik/dirgha-form-7-sim")`
+**Status:** the path is proven locally. `LeRobotDataset("salik/dex-arm-01-sim")`
 loads in `lerobot` 0.6.1 — 37 episodes, 1722 frames, 30 fps, feature shapes
 27 / 7 / 27 — after tagging the repo `v3.0` (LeRobot refuses untagged repos).
 `lerobot-train --policy.type=act` then ran 10 steps on CPU at batch 2 and wrote a
@@ -100,7 +100,7 @@ episodes generalise. The checkpoint is a *pipeline proof*.
    *Acceptance:* one table in `bench/README.md` with three hands, same seed,
    same protocol.
 2. **CAD that opens.** `py -m pip install build123d` (~300 MB, no GPU), run
-   `hardware/dirgha-form-7/cad/generate.py`, commit the STEP files and one
+   `hardware/dex-arm-01/cad/generate.py`, commit the STEP files and one
    rendered PNG per solid.
    *Acceptance:* STEP files parse, bounding boxes match `cad/params.py`.
 3. **Demo build.** `npm run build` → static `dist/`, deployed to any static

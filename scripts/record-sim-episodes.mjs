@@ -233,7 +233,7 @@ async function main() {
   const retained = episodes.filter((e) => e.retained).length;
   const meta = {
     generated_at: new Date().toISOString(),
-    source: 'dirgha-form-7/mujoco-sim',
+    source: 'dex-arm-01/mujoco-sim',
     seed: config.seed,
     fps: RECORD_HZ,
     timestep: DT,

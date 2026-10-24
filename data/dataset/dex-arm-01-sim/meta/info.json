@@ -1,6 +1,6 @@
 {
   "codebase_version": "v3.0",
-  "robot_type": "dirgha_form_7",
+  "robot_type": "dex_arm_01",
   "total_episodes": 37,
   "total_frames": 1722,
   "total_tasks": 3,

@@ -34,7 +34,7 @@ function makeFrames(dir) {
   );
 }
 
-const tmp = mkdtempSync(join(tmpdir(), 'dirgha-fixture-'));
+const tmp = mkdtempSync(join(tmpdir(), 'dex-fixture-'));
 try {
   const images = makeFrames(tmp);
   const recorder = new DatasetRecorder({ fps: FPS, task: 'close the hand around a cylinder (synthetic fixture)' });

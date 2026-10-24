@@ -27,7 +27,7 @@
     "use_amp": false,
     "use_peft": false,
     "push_to_hub": true,
-    "repo_id": "salik/dirgha-form-7-act",
+    "repo_id": "salik/dex-arm-01-act",
     "private": null,
     "tags": null,
     "license": null,

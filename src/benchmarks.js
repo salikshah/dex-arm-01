@@ -1,4 +1,4 @@
-// Dirgha Form-7: Dex-YCB Manipulation Benchmark Objects & Grasp Execution Engine
+// DEX ARM 01: Dex-YCB Manipulation Benchmark Objects & Grasp Execution Engine
 // Implements standard calibrated YCB robotics benchmark objects (Mug, Bleach Bottle, Can, Stylus)
 // with physical mass, friction, approach trajectories, and automated Ferrari-Canny grasp lifts.
 

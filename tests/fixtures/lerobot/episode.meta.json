@@ -1,7 +1,7 @@
 {
   "info": {
     "codebase_version": "v3.0",
-    "robot_type": "dirgha_form_7",
+    "robot_type": "dex_arm_01",
     "total_episodes": 1,
     "total_frames": 30,
     "total_tasks": 1,
@@ -179,6 +179,6 @@
     "length": 30,
     "fps": 30,
     "duration_s": 0.9333,
-    "source": "dirgha-form-7/browser"
+    "source": "dex-arm-01/browser"
   }
 }

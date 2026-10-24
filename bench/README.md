@@ -66,7 +66,7 @@ The collision geometry is a capsule-and-box proxy, far simpler than the render
 model, and there is no actuator saturation, tendon stretch, or skin compliance.
 Force sensing is not reported because the WASM `mj_contactForce` binding returns
 zeros for this model; the harness reports object acceleration instead. A hardware
-success rate requires building the hand — see `hardware/dirgha-form-7/README.md`.
+success rate requires building the hand — see `hardware/dex-arm-01/README.md`.
 
 ## Regenerating the report
 

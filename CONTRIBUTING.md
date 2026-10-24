@@ -10,7 +10,7 @@ often a measurement rather than a feature.
 - Search existing issues; several "missing" features are deliberate (see
   `docs/OPEN_SOURCE_GAP_ANALYSIS.md`).
 - Do not claim hardware was validated unless you ran the checklist in
-  `hardware/dirgha-form-7/README.md`. Say what you measured and with what.
+  `hardware/dex-arm-01/README.md`. Say what you measured and with what.
 
 ## Development
 

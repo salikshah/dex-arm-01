@@ -1,6 +1,6 @@
 {
     "dataset": {
-        "repo_id": "salik/dirgha-form-7-sim",
+        "repo_id": "salik/dex-arm-01-sim",
         "repo_type": "dataset",
         "root": null,
         "episodes": null,
@@ -113,7 +113,7 @@
         "use_amp": false,
         "use_peft": false,
         "push_to_hub": true,
-        "repo_id": "salik/dirgha-form-7-act",
+        "repo_id": "salik/dex-arm-01-act",
         "private": null,
         "tags": null,
         "license": null,
@@ -147,8 +147,8 @@
         "optimizer_lr_backbone": 1e-05
     },
     "reward_model": null,
-    "output_dir": "outputs/act_dirgha",
-    "job_name": "dirgha_act",
+    "output_dir": "outputs/act_dex_arm",
+    "job_name": "dex_arm_act",
     "resume": false,
     "seed": 1000,
     "cudnn_deterministic": false,

@@ -74,7 +74,7 @@ These are not polish items; each one can invalidate a claim.
    someone can load a published episode. Record and host a small set with a
    datasheet (10 episodes, 3 objects, 30 Hz, known camera).
 5. **Hardware claims outrun the design.** The 8 mm motor / 15 N target is
-   internally inconsistent (see `hardware/dirgha-form-7/README.md §3`). Either
+   internally inconsistent (see `hardware/dex-arm-01/README.md §3`). Either
    restate the force target or change the actuator, and do it in public.
 
 ## 4. What is genuinely differentiated

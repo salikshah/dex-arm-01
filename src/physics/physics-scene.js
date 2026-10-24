@@ -1,4 +1,4 @@
-// Dirgha Form-7: Three.js ⇄ MuJoCo bridge.
+// DEX ARM 01: Three.js ⇄ MuJoCo bridge.
 //
 // Owns the lazily-created WASM runtime, feeds it the commanded joint pose, and
 // draws the free physics body in the visual hand's frame. The visual hand and

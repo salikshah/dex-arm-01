@@ -1,5 +1,5 @@
 ---
-datasets: salik/dirgha-form-7-sim
+datasets: salik/dex-arm-01-sim
 library_name: lerobot
 license: apache-2.0
 model_name: act
@@ -37,7 +37,7 @@ Learn how to train and run it in the [LeRobot act guide](https://huggingface.co/
 ## Model Details
 
 - **License:** apache-2.0
-- **Robot type:** `dirgha_form_7`
+- **Robot type:** `dex_arm_01`
 
 
 ## Inputs & Outputs
@@ -60,13 +60,13 @@ The policy consumes these observation features and produces these action feature
 
 ## Training Dataset
 
-- **Repository:** [salik/dirgha-form-7-sim](https://huggingface.co/datasets/salik/dirgha-form-7-sim)
+- **Repository:** [salik/dex-arm-01-sim](https://huggingface.co/datasets/salik/dex-arm-01-sim)
 - **Episodes:** 37
 - **Frames:** 1722
 - **Frame rate:** 30 FPS
 - **Task(s):** "0", "1", "2"
 
-<a class="flex" href="https://huggingface.co/spaces/lerobot/visualize_dataset?path=salik/dirgha-form-7-sim">
+<a class="flex" href="https://huggingface.co/spaces/lerobot/visualize_dataset?path=salik/dex-arm-01-sim">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/badges/resolve/main/visualize-this-dataset-xl.svg"/>
 <img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/badges/resolve/main/visualize-this-dataset-xl-dark.svg"/>
 </a>
@@ -101,10 +101,10 @@ The short version to run and train this policy:
 ```bash
 lerobot-rollout \
   --strategy.type=base \
-  --robot.type=dirgha_form_7 \
+  --robot.type=dex_arm_01 \
   --robot.port=<your_robot_port> \
   --robot.cameras="{ <camera_1>: {type: opencv, index_or_path: <index_or_path>, width: 640, height: 480, fps: 30}, <camera_2>: {type: opencv, index_or_path: <index_or_path>, width: 640, height: 480, fps: 30}}" \
-  --policy.path=salik/dirgha-form-7-act \
+  --policy.path=salik/dex-arm-01-act \
   --task="0" \
   --duration=60
 ```

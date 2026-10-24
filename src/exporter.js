@@ -1,10 +1,10 @@
-// PNG, GLB, URDF, and MuJoCo MJCF export for Dirgha Form-7.
+// PNG, GLB, URDF, and MuJoCo MJCF export for DEX ARM 01.
 import * as THREE from 'three';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { generateURDF, generateMJCF } from './robot-specs.js';
 import { exportROS2Package } from './ros2-packager.js';
 
-export function exportPNG(renderer, scene, camera, filename = 'dirgha-form-7-view.png') {
+export function exportPNG(renderer, scene, camera, filename = 'dex-arm-01-view.png') {
   renderer.render(scene, camera);
   return new Promise((resolve, reject) => {
     renderer.domElement.toBlob((blob) => {
@@ -15,7 +15,7 @@ export function exportPNG(renderer, scene, camera, filename = 'dirgha-form-7-vie
   });
 }
 
-export function exportGLB(modelRoot, filename = 'dirgha-form-7.glb') {
+export function exportGLB(modelRoot, filename = 'dex-arm-01.glb') {
   return new Promise((resolve, reject) => {
     const cloneTree = (src) => {
       const out = src.isMesh ? new src.constructor(src.geometry, src.material) : new THREE.Group();
@@ -42,21 +42,21 @@ export function exportGLB(modelRoot, filename = 'dirgha-form-7.glb') {
   });
 }
 
-export function exportURDF(filename = 'dirgha_form_7.urdf') {
+export function exportURDF(filename = 'dex_arm_01.urdf') {
   const xml = generateURDF();
   const blob = new Blob([xml], { type: 'application/xml;charset=utf-8' });
   download(blob, filename);
   return Promise.resolve({ bytes: blob.size, filename });
 }
 
-export function exportMJCF(filename = 'dirgha_form_7.xml') {
+export function exportMJCF(filename = 'dex_arm_01.xml') {
   const xml = generateMJCF();
   const blob = new Blob([xml], { type: 'application/xml;charset=utf-8' });
   download(blob, filename);
   return Promise.resolve({ bytes: blob.size, filename });
 }
 
-export function exportROS2(filename = 'dirgha_form_7_ros2.zip') {
+export function exportROS2(filename = 'dex_arm_01_ros2.zip') {
   return exportROS2Package(filename);
 }
 

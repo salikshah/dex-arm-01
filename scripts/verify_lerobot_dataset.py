@@ -6,8 +6,8 @@ itself via `ffprobe`.
 
 Usage
 -----
-    py scripts/verify_lerobot_dataset.py out/dirgha_demo
-    py scripts/verify_lerobot_dataset.py out/dirgha_demo --probe
+    py scripts/verify_lerobot_dataset.py out/dex_arm_01_demo
+    py scripts/verify_lerobot_dataset.py out/dex_arm_01_demo --probe
 
 `--probe` reads every data file with pyarrow and reports row counts; without it
 only metadata and the first file are opened. Exit code 1 means the dataset is

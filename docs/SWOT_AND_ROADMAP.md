@@ -1,8 +1,8 @@
-# Dirgha Form-7: Dexterous Hand SWOT Analysis, System Architecture & Execution Roadmap
+# DEX ARM 01: Dexterous Hand SWOT Analysis, System Architecture & Execution Roadmap
 
 **Document Version:** 1.0.0  
 **Date:** October 24, 2026  
-**System:** Dirgha Form-7 (7-Axis Redundant Manipulator + 20-DoF Biomimetic Tendon Hand)  
+**System:** DEX ARM 01 (7-Axis Redundant Manipulator + 20-DoF Biomimetic Tendon Hand)  
 **Author:** Salik Shah & Antigravity Autonomous Systems Architecture Team  
 **Live Production Deployments:**
 - **Manipulator & Hand Application:** [https://salikshah.com/work/dexterous-arm/](https://salikshah.com/work/dexterous-arm/)
@@ -26,7 +26,7 @@
 - **Actuator Dynamics & Thermals:** `src/actuator-dynamics.js` (Harmonic Drive gearboxes 1:100 to 1:30, static gravity torques, $I^2R$ thermal dissipation $25^\circ\text{C} \to 115^\circ\text{C}$)
 - **Workspace Collision Safety:** `src/collision-checker.js` (Ericson capsule-capsule continuous distance queries, clearance telemetry, floor boundary alarms)
 - **Dex-YCB Benchmarks:** `src/benchmarks.js` (Procedural models for Mug, Bleach Cleanser, Chef Can, Stylus with automated 4-stage grasp & lift)
-- **ROS 2 & MoveIt 2 Packager:** `src/ros2-packager.js` (In-memory zero-dependency ZIP encoder outputting complete `dirgha_form_7_ros2.zip`)
+- **ROS 2 & MoveIt 2 Packager:** `src/ros2-packager.js` (In-memory zero-dependency ZIP encoder outputting complete `dex_arm_01_ros2.zip`)
 - **Model Exporters:** `src/exporter.js` (Standalone URDF, MuJoCo MJCF XML, GLB, and 4K PNG screen capture)
 - **Telemetry HUD Engine:** `src/telemetry-hud.js` (Live dexterity $w$, GWS $\epsilon$, 5-lane tendon tension, 7-axis torques/temps, collision clearance gauge)
 - **User Interface & Engineering Drawer:** `src/ui.js` (Joint FK sliders, Dex-YCB selector, gizmo toggles, packaging buttons)
@@ -43,9 +43,9 @@
 - **Live Production CDN & CDP Validator:** `scratch/verify_live_prod.cjs`
 
 ### 1.5 Artifacts & Media Records
-- **Comprehensive Frontier Engineering Report:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dirgha_form_7_frontier_report.md`
-- **Portfolio Showcase Documentation:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dirgha_form_7_showcase.md`
-- **Master SWOT & Roadmap Artifact:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dirgha_form_7_hand_swot_and_roadmap.md`
+- **Comprehensive Frontier Engineering Report:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dex_arm_01_frontier_report.md`
+- **Portfolio Showcase Documentation:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dex_arm_01_showcase.md`
+- **Master SWOT & Roadmap Artifact:** `C:\Users\ABC\.gemini\antigravity\brain\dd4e2911-d4f0-4204-9f8a-3a6129322a91\dex_arm_01_hand_swot_and_roadmap.md`
 
 ---
 
@@ -53,7 +53,7 @@
 
 ### 2.1 Competitive Benchmark Matrix
 
-| Feature / Metric | **Dirgha Form-7 Hand** | **Shadow Dexterous Hand** | **Tesla Optimus Gen 2** | **Figure 02 Hand** | **Wonik Allegro Hand** |
+| Feature / Metric | **DEX ARM 01 Hand** | **Shadow Dexterous Hand** | **Tesla Optimus Gen 2** | **Figure 02 Hand** | **Wonik Allegro Hand** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Actuation Topology** | Forearm BLDC + 24 Tendons | Forearm Smart Actuators + Cables | Forearm BLDC + Cable/Rod | Palm-integrated direct links | Direct-drive joint motors |
 | **Active Degrees of Freedom** | **20 DoF** (5 coupled DIPs) | **20–24 DoF** | **11 DoF** (Gen 3 targeting 22) | **~16 DoF** | **16 DoF** (4 fingers) |
@@ -131,14 +131,14 @@
 ### Prompt Phase 1: Direct In-Browser MuJoCo WASM Physics Runtime
 
 ```markdown
-Activate dirgha-build-your-own-humanoid-robotics and tech-vllm-sglang-inference skills.
+Activate dex-build-your-own-humanoid-robotics and tech-vllm-sglang-inference skills.
 
 We need to upgrade the client-side physics in `D:\Projects\SalikShah.com\website\work\dexterous-arm/` to run DeepMind's official `@mujoco/mujoco` WASM runtime directly in the browser:
 
 1. Target Directory: `D:\Projects\SalikShah.com\website\work\dexterous-arm/`
 2. Dynamic Import: Update `src/ui.js` and `src/main.js` to dynamically load `@mujoco/mujoco` WASM from the vendor/CDN directory only when the user toggles "Live MuJoCo Physics" in the engineering drawer.
 3. Model Ingestion:
-   - Feed the procedurally generated `dirgha_form_7.xml` MJCF into `mujoco.FS.writeFile('/model.xml', xmlContent)`.
+   - Feed the procedurally generated `dex_arm_01.xml` MJCF into `mujoco.FS.writeFile('/model.xml', xmlContent)`.
    - Initialize `new mujoco.Model('/model.xml')` and `new mujoco.Data(model)`.
 4. Physics Stepping Loop:
    - Run `mujoco.mj_step(model, data)` at 500Hz in a Web Worker or synchronous animation step.
@@ -153,7 +153,7 @@ We need to upgrade the client-side physics in `D:\Projects\SalikShah.com\website
 ### Prompt Phase 2: Minimum-Jerk MoveIt 2 Trajectory Waypoint Sequencer
 
 ```markdown
-Activate tech-langgraph-statecharts and dirgha-build-your-own-humanoid-robotics skills.
+Activate tech-langgraph-statecharts and dex-build-your-own-humanoid-robotics skills.
 
 Implement a real-time MoveIt 2-compatible minimum-jerk trajectory player in `D:\Projects\SalikShah.com\website\work\dexterous-arm/`:
 
@@ -179,7 +179,7 @@ Implement a real-time MoveIt 2-compatible minimum-jerk trajectory player in `D:\
 ### Prompt Phase 3: Spatial Teleoperation Bridge (WebXR / Vision Pro / OpenVLA)
 
 ```markdown
-Activate dirgha-build-your-own-humanoid-robotics skill.
+Activate dex-build-your-own-humanoid-robotics skill.
 
 Add a WebXR spatial teleoperation and dataset logging bridge to `D:\Projects\SalikShah.com\website\work\dexterous-arm/`:
 
@@ -203,9 +203,9 @@ Add a WebXR spatial teleoperation and dataset logging bridge to `D:\Projects\Sal
 ```markdown
 Activate tech-opencascade-brep-geometry and sovereign-furniture-director skills.
 
-Generate the mechanical engineering specification and parametric 3D CAD files for the physical Dirgha Form-7 quick-swap forearm tendon cartridge:
+Generate the mechanical engineering specification and parametric 3D CAD files for the physical DEX ARM 01 quick-swap forearm tendon cartridge:
 
-1. Directory: Output documentation and Python OpenCascade (OCCT) scripts to `D:\Projects\SalikShah.com\hardware\dirgha-form-7/`.
+1. Directory: Output documentation and Python OpenCascade (OCCT) scripts to `D:\Projects\SalikShah.com\hardware\dex-arm-01/`.
 2. Mechanical Architecture:
    - 20x Maxon ECX Torque 8mm or Faulhaber 1024 SR brushless micro-motors with 16:1 spur gearheads.
    - 24x CNC aluminum 7075 micro-spools with integrated cable anchors for 0.4mm Dyneema braids.

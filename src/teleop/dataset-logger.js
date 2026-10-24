@@ -1,4 +1,4 @@
-// Dirgha Form-7: episode recorder.
+// DEX ARM 01: episode recorder.
 //
 // Frames are stored with LeRobot's feature naming so a recording can be turned
 // into a dataset with scripts/lerobot_convert.py:
@@ -26,7 +26,7 @@ export const STATE_NAMES = [...ARM_JOINT_NAMES, ...HAND_JOINT_NAMES];
 // Matches the live LeRobot v3.0 metadata layout (verified against
 // `lerobot/xarm_lift_medium`: `splits`, `data_path`, `video_path`, per-feature
 // `fps`, motor names as {motors:[...]}).
-export function buildInfo({ fps = 30, task = 'grasp', robotType = 'dirgha_form_7', totalFrames = 0, totalEpisodes = 0 } = {}) {
+export function buildInfo({ fps = 30, task = 'grasp', robotType = 'dex_arm_01', totalFrames = 0, totalEpisodes = 0 } = {}) {
   return {
     codebase_version: 'v3.0',
     robot_type: robotType,
@@ -172,7 +172,7 @@ export class DatasetRecorder {
       length: this.frames.length,
       fps: this.fps,
       duration_s: this.duration,
-      source: 'dirgha-form-7/browser',
+      source: 'dex-arm-01/browser',
     };
   }
 
@@ -184,13 +184,13 @@ export class DatasetRecorder {
     };
   }
 
-  downloadJSONL(filename = 'dirgha_form_7_episode.jsonl') {
+  downloadJSONL(filename = 'dex_arm_01_episode.jsonl') {
     const blob = new Blob([this.toJSONL()], { type: 'application/x-ndjson' });
     download(blob, filename);
     return { filename, frames: this.frames.length, bytes: blob.size };
   }
 
-  downloadMeta(filename = 'dirgha_form_7_episode.meta.json') {
+  downloadMeta(filename = 'dex_arm_01_episode.meta.json') {
     const blob = new Blob([JSON.stringify({ info: this.toInfo(), episode: this.toEpisodeMeta() }, null, 2)], { type: 'application/json' });
     download(blob, filename);
     return { filename, bytes: blob.size };
