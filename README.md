@@ -298,7 +298,7 @@ If you use **DEX ARM 01** in academic research, benchmark studies, or physical A
 
 ## Credits & Sources
 
-- **Conceptual Genesis & Visual Art Direction:** The original 3D aesthetic and exploratory conceptual renders originated from creative work by **@crystalsssup** & **Kimi 3.1 Pro**.
+- **Conceptual Genesis & Visual Art Direction:** The original 3D aesthetic and exploratory conceptual renders originated from creative work by [**@crystalsssup**](https://x.com/crystalsssup/status/2113684128734625948) & **Kimi 3.1 Pro**.
 - **Robotics Systems & Scientific Architecture:** Converted into a mathematically verified, physically accurate robotics platform by **Salik Shah** (27-DoF kinematic tree, 500 Hz MuJoCo WASM contact simulation, 7-axis DLS inverse kinematics, minimum-jerk trajectory planning, and ROS 2 / MoveIt 2 packaging).
 - **Academic & Engineering Sources:** Complete attribution for Google DeepMind MuJoCo, Hugging Face LeRobot & ACT, Three.js, and robotics kinematics/control literature (Yoshikawa, Flash & Hogan, Ferrari-Canny, Chiaverini) is documented in **[CREDITS.md](CREDITS.md)** and **[SOURCES.md](SOURCES.md)**.
 
@@ -314,5 +314,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <p align="center">
-  Architected & engineered by <a href="https://salikshah.com">Salik Shah</a>.
+  Initial 3D conceptual design by <a href="https://x.com/crystalsssup/status/2113684128734625948" target="_blank" rel="noopener">@crystalsssup</a> &amp; Kimi 3.1 Pro.<br />
+  Architected &amp; engineered into an open-source physical AI lab by <a href="https://salikshah.com">Salik Shah</a>.
 </p>

@@ -19,7 +19,7 @@
 
 ## 2. Conceptual Genesis & Initial Visual Design
 
-- **@crystalsssup & Kimi 3.1 Pro** — Initial conceptual design and exploratory 3D aesthetic:
+- [**@crystalsssup**](https://x.com/crystalsssup/status/2113684128734625948) & **Kimi 3.1 Pro** — Initial conceptual design and exploratory 3D aesthetic:
   - Provided the original visual concept and exploratory renders for the robotic hand and arm styling.
   - This visual concept was subsequently adopted as the aesthetic foundation and completely re-engineered by Salik Shah into a mathematically rigorous, physically accurate, and scientifically validated robotics research platform (introducing true forward/inverse kinematics trees, 500 Hz DeepMind MuJoCo WASM contact physics, 24×20 tendon moment-arm matrices, Ferrari-Canny grasp quality metrics, LeRobot ACT imitation learning, and ROS 2/MoveIt 2 export).
 

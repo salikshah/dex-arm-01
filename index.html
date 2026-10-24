@@ -568,6 +568,13 @@
     color: var(--ink-3);
     letter-spacing: 0.06em;
   }
+  .status-badge a {
+    pointer-events: auto;
+    transition: color 0.15s ease;
+  }
+  .status-badge a:hover {
+    color: var(--accent) !important;
+  }
   .live-dot {
     color: #10b981;
     font-size: 8px;
@@ -899,9 +906,9 @@
 </button>
 
 <!-- Bottom-Left Status Strip -->
-<div id="statusBadge" class="status-badge" aria-hidden="true">
+<div id="statusBadge" class="status-badge">
   <span class="live-dot">●</span>
-  <span class="mono">RAMA O1 // 20-DoF BIOMIMETIC TENDON HAND // WASM 60 FPS</span>
+  <span class="mono">DEX ARM 01 // 20-DoF TENDON HAND // DESIGN: <a href="https://x.com/crystalsssup/status/2113684128734625948" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;font-weight:600;">@crystalsssup</a> // 500 Hz WASM</span>
 </div>
 
 <!-- Sources Slide-Over Drawer -->
