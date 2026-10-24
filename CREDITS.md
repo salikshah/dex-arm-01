@@ -17,7 +17,15 @@
 
 ---
 
-## 2. Upstream Physics & Simulation
+## 2. Conceptual Genesis & Initial Visual Design
+
+- **@crystalsssup & Kimi 3.1 Pro** — Initial conceptual design and exploratory 3D aesthetic:
+  - Provided the original visual concept and exploratory renders for the robotic hand and arm styling.
+  - This visual concept was subsequently adopted as the aesthetic foundation and completely re-engineered by Salik Shah into a mathematically rigorous, physically accurate, and scientifically validated robotics research platform (introducing true forward/inverse kinematics trees, 500 Hz DeepMind MuJoCo WASM contact physics, 24×20 tendon moment-arm matrices, Ferrari-Canny grasp quality metrics, LeRobot ACT imitation learning, and ROS 2/MoveIt 2 export).
+
+---
+
+## 3. Upstream Physics & Simulation
 
 - **MuJoCo (Multi-Joint dynamics with Contact)**  
   *Google DeepMind* — [mujoco.org](https://mujoco.org) | [github.com/google-deepmind/mujoco](https://github.com/google-deepmind/mujoco)  
@@ -36,7 +44,7 @@
 
 ---
 
-## 3. Robot Learning & Imitation Policies
+## 4. Robot Learning & Imitation Policies
 
 - **LeRobot (State-of-the-art Machine Learning for Real-World Robotics)**  
   *Hugging Face* — [github.com/huggingface/lerobot](https://github.com/huggingface/lerobot)  
@@ -67,7 +75,7 @@
 
 ---
 
-## 4. 3D Web Graphics & Math
+## 5. 3D Web Graphics & Math
 
 - **Three.js**  
   *Ricardo Cabello (Mr.doob) and the Three.js Community* — [threejs.org](https://threejs.org)  
@@ -76,7 +84,7 @@
 
 ---
 
-## 5. Kinematics, Control & Optimization Algorithms
+## 6. Kinematics, Control & Optimization Algorithms
 
 - **Yoshikawa Manipulability Measure & Ellipsoid**  
   *Tsuneo Yoshikawa*  
@@ -138,7 +146,7 @@
 
 ---
 
-## 6. Benchmarks & Manipulation Props
+## 7. Benchmarks & Manipulation Props
 
 - **Dex-YCB & The YCB Object and Model Set**  
   *Berk Calli, Aaron Walsman, Arjun Singh, Siddhartha Srinivasa, Pieter Abbeel, Aaron M. Dollar*  
@@ -157,7 +165,7 @@
 
 ---
 
-## 7. Robotics Middleware & Standards
+## 8. Robotics Middleware & Standards
 
 - **ROS 2 (Robot Operating System)**  
   *Open Source Robotics Foundation (OSRF)* — [ros.org](https://www.ros.org)  
@@ -173,7 +181,7 @@
 
 ---
 
-## 8. Typography & Design Tokens
+## 9. Typography & Design Tokens
 
 - **Literata** — TypeTogether ([Google Fonts](https://fonts.google.com/specimen/Literata)), licensed under SIL Open Font License (OFL-1.1).
 - **Instrument Sans** — Instrument ([Google Fonts](https://fonts.google.com/specimen/Instrument+Sans)), licensed under SIL Open Font License (OFL-1.1).

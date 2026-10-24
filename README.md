@@ -298,7 +298,9 @@ If you use **DEX ARM 01** in academic research, benchmark studies, or physical A
 
 ## Credits & Sources
 
-Complete attribution for all foundational physics engines (Google DeepMind MuJoCo), imitation learning frameworks (Hugging Face LeRobot & ACT), 3D math libraries (Three.js), and robotics kinematics/control literature (Yoshikawa, Flash & Hogan, Ferrari-Canny, Chiaverini) is documented in **[CREDITS.md](CREDITS.md)** and **[SOURCES.md](SOURCES.md)**.
+- **Conceptual Genesis & Visual Art Direction:** The original 3D aesthetic and exploratory conceptual renders originated from creative work by **@crystalsssup** & **Kimi 3.1 Pro**.
+- **Robotics Systems & Scientific Architecture:** Converted into a mathematically verified, physically accurate robotics platform by **Salik Shah** (27-DoF kinematic tree, 500 Hz MuJoCo WASM contact simulation, 7-axis DLS inverse kinematics, minimum-jerk trajectory planning, and ROS 2 / MoveIt 2 packaging).
+- **Academic & Engineering Sources:** Complete attribution for Google DeepMind MuJoCo, Hugging Face LeRobot & ACT, Three.js, and robotics kinematics/control literature (Yoshikawa, Flash & Hogan, Ferrari-Canny, Chiaverini) is documented in **[CREDITS.md](CREDITS.md)** and **[SOURCES.md](SOURCES.md)**.
 
 ---
 
