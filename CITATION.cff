@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If this work supports a publication, cite it as below."
+title: "DEX ARM 01: Open-Source 7-Axis Manipulator & 20-DoF Biomimetic Tendon Hand Lab"
+abstract: >-
+  A 7-axis robotic manipulator with a 20-DoF biomimetic tendon-driven hand, including
+  damped least-squares inverse kinematics, grasp-wrench telemetry, a six-stage
+  minimum-jerk grasp planner, a browser MuJoCo WebAssembly physics runtime, WebXR
+  hand teleoperation, Hugging Face LeRobot ACT imitation learning, and ROS 2 export.
+authors:
+  - family-names: Shah
+    given-names: Salik
+url: "https://salikshah.com/work/dex-arm-01/"
+repository-code: "https://github.com/salikshah/dex-arm-01"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-24
+keywords:
+  - dexterous manipulation
+  - tendon-driven hand
+  - robotic arm
+  - inverse kinematics
+  - MuJoCo
+  - WebXR
+  - robot learning
+  - imitation learning
+  - LeRobot
+  - ACT policy
+  - ROS 2
+type: software

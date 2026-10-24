@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Vendored MuJoCo WASM (obtained with `npm run vendor:mujoco`; CDN fallback exists)
+vendor/mujoco/
+
+# Large model weights (hosted on Hugging Face: https://huggingface.co/salik/dex-arm-01-act)
+*.safetensors
+*.pt
+*.bin
+*.onnx
+.cache/
+**/.cache/
+
+# Local raw datasets and external downloads
+colab data downloaded/
+*.tar.gz
+*.zip
+
+# Test and debug artifacts
+tests/e2e/.artifacts/
+.tmp-cdp/
+.tmp-cdp-*/
+.tmp-*/
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

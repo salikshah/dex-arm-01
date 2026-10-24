@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Dirgha Form-7 — MuJoCo WASM fixture</title>
+<style>body{font:14px/1.5 ui-monospace,monospace;padding:24px;background:#111;color:#eee}pre{white-space:pre-wrap}</style>
+</head>
+<body>
+<h1>MuJoCo WASM fixture</h1>
+<p>Headless, WebGL-free verification of the physics runtime used by the scene.</p>
+<pre id="out">loading…</pre>
+<script type="module">
+import { MujocoRuntime } from '../../src/physics/mujoco-runtime.js';
+
+const out = document.getElementById('out');
+const open = [0, 10, 8, 4, 0, 10, 8, 4, 0, 10, 8, 4, 0, 10, 8, 4, -15, 10, 8, 4];
+const closed = [0, 55, 72, 42, 0, 58, 74, 44, 0, 56, 73, 43, 0, 54, 70, 40, -20, 38, 32, 18];
+
+window.__physicsTest = { status: 'loading' };
+try {
+  const t0 = performance.now();
+  const rt = await MujocoRuntime.create();
+  const loadMs = performance.now() - t0;
+
+  rt.setCommand([0, 0, 0, 0, 0, 0, 0], open);
+  rt.dropObject();
+  for (let i = 0; i < 250; i++) rt.step(0.002);
+  const landed = rt.getPalmRelativeState();
+
+  for (let k = 1; k <= 20; k++) {
+    const blend = k / 20;
+    const hand = open.map((v, i) => v + (closed[i] - v) * blend);
+    rt.setCommand([0, 0, 0, 0, 0, 0, 0], hand);
+    for (let i = 0; i < 30; i++) rt.step(0.002);
+  }
+  const held = rt.getPalmRelativeState();
+  const telemetry = rt.telemetry();
+
+  window.__physicsTest = {
+    status: 'done',
+    source: rt.source,
+    loadMs: Math.round(loadMs),
+    landed,
+    held,
+    telemetry,
+    heldRadius: Math.hypot(...held.localPosition),
+  };
+  out.textContent = JSON.stringify(window.__physicsTest, null, 2);
+  rt.dispose();
+} catch (err) {
+  window.__physicsTest = { status: 'error', error: err?.message || String(err) };
+  out.textContent = window.__physicsTest.error;
+  console.error(err);
+}
+</script>
+</body>
+</html>

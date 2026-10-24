@@ -1,0 +1,184 @@
+{
+  "info": {
+    "codebase_version": "v3.0",
+    "robot_type": "dirgha_form_7",
+    "total_episodes": 1,
+    "total_frames": 30,
+    "total_tasks": 1,
+    "chunks_size": 1000,
+    "fps": 30,
+    "splits": {
+      "train": "0:1"
+    },
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+    "features": {
+      "observation.state": {
+        "dtype": "float32",
+        "shape": [
+          27
+        ],
+        "names": {
+          "motors": [
+            "J1",
+            "J2",
+            "J3",
+            "J4",
+            "J5",
+            "J6",
+            "J7",
+            "index_abd",
+            "index_mcp",
+            "index_pip",
+            "index_dip",
+            "middle_abd",
+            "middle_mcp",
+            "middle_pip",
+            "middle_dip",
+            "ring_abd",
+            "ring_mcp",
+            "ring_pip",
+            "ring_dip",
+            "little_abd",
+            "little_mcp",
+            "little_pip",
+            "little_dip",
+            "thumb_abd",
+            "thumb_cmc",
+            "thumb_mcp",
+            "thumb_ip"
+          ]
+        },
+        "fps": 30
+      },
+      "observation.tactile": {
+        "dtype": "float32",
+        "shape": [
+          6
+        ],
+        "names": {
+          "motors": [
+            "thumb_force_n",
+            "index_force_n",
+            "middle_force_n",
+            "ring_force_n",
+            "little_force_n",
+            "grasp_epsilon"
+          ]
+        },
+        "fps": 30
+      },
+      "action": {
+        "dtype": "float32",
+        "shape": [
+          27
+        ],
+        "names": {
+          "motors": [
+            "J1",
+            "J2",
+            "J3",
+            "J4",
+            "J5",
+            "J6",
+            "J7",
+            "index_abd",
+            "index_mcp",
+            "index_pip",
+            "index_dip",
+            "middle_abd",
+            "middle_mcp",
+            "middle_pip",
+            "middle_dip",
+            "ring_abd",
+            "ring_mcp",
+            "ring_pip",
+            "ring_dip",
+            "little_abd",
+            "little_mcp",
+            "little_pip",
+            "little_dip",
+            "thumb_abd",
+            "thumb_cmc",
+            "thumb_mcp",
+            "thumb_ip"
+          ]
+        },
+        "fps": 30
+      },
+      "observation.images.wrist": {
+        "dtype": "video",
+        "shape": [
+          192,
+          192,
+          3
+        ],
+        "names": [
+          "height",
+          "width",
+          "channel"
+        ],
+        "video_info": {
+          "video.fps": 30,
+          "video.codec": "h264",
+          "video.pix_fmt": "yuv420p",
+          "video.is_depth_map": false,
+          "has_audio": false
+        },
+        "fps": 30
+      },
+      "timestamp": {
+        "dtype": "float32",
+        "shape": [
+          1
+        ],
+        "names": null,
+        "fps": 30
+      },
+      "frame_index": {
+        "dtype": "int64",
+        "shape": [
+          1
+        ],
+        "names": null,
+        "fps": 30
+      },
+      "episode_index": {
+        "dtype": "int64",
+        "shape": [
+          1
+        ],
+        "names": null,
+        "fps": 30
+      },
+      "index": {
+        "dtype": "int64",
+        "shape": [
+          1
+        ],
+        "names": null,
+        "fps": 30
+      },
+      "task_index": {
+        "dtype": "int64",
+        "shape": [
+          1
+        ],
+        "names": null,
+        "fps": 30
+      }
+    },
+    "task": "close the hand around a cylinder (synthetic fixture)"
+  },
+  "episode": {
+    "episode_index": 0,
+    "task": "close the hand around a cylinder (synthetic fixture)",
+    "tasks": [
+      "close the hand around a cylinder (synthetic fixture)"
+    ],
+    "length": 30,
+    "fps": 30,
+    "duration_s": 0.9333,
+    "source": "dirgha-form-7/browser"
+  }
+}

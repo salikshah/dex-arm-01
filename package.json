@@ -1,0 +1,37 @@
+{
+  "name": "dex-arm-01",
+  "version": "0.1.0",
+  "description": "DEX ARM 01: Open-source 7-axis manipulator with 20-DoF biomimetic tendon hand. Browser MuJoCo WASM physics, LeRobot ACT imitation learning, and ROS 2 export.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salikshah/dex-arm-01.git"
+  },
+  "homepage": "https://salikshah.com/work/dex-arm-01/",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/unit/**/*.test.mjs\"",
+    "test:e2e": "node tests/e2e/smoke.mjs",
+    "check": "npm test && npm run test:e2e",
+    "bench": "node bench/drop-benchmark.mjs",
+    "dataset:fixture": "node scripts/make-fixture-episode.mjs",
+    "vendor:mujoco": "node scripts/vendor-mujoco.mjs"
+  },
+  "devDependencies": {
+    "@mujoco/mujoco": "3.17.0"
+  },
+  "keywords": [
+    "robotics",
+    "dexterous-manipulation",
+    "tendon-driven",
+    "mujoco",
+    "webxr",
+    "lerobot",
+    "three.js"
+  ]
+}
